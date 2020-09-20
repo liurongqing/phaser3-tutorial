@@ -1,0 +1,25 @@
+{
+  "hosting": {
+    "public": "dist",
+    "cleanUrls": true,
+    "rewrites": [
+      {
+        "source": "/**/!(*.@(js|ts|html|css|json|svg|png|jpg|jpeg))",
+        "destination": "/index.html"
+      }
+    ],
+    "headers": [{
+      "source" : "/assets/versions.json",
+      "headers" : [{
+        "key" : "Access-Control-Allow-Origin",
+        "value" : "*"
+      }]
+    }],
+    "ignore": [
+      "firebase.json",
+      "**/node_modules/**",
+      "tmp",
+      "deploy"
+    ]
+  }
+}
