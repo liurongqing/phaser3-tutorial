@@ -10,6 +10,7 @@ Powered by https://github.com/angular/material.angular.io
 ```shell
 "outputPath": "docs", # 将 dist 改成 docs
 "src/404.html" # 在 "src/sitemap.xml" 下添加 
+"src/CNAME" # 在 "src/404.html" 下添加
 ```
 2. `404.html` 内容
 
@@ -24,15 +25,15 @@ Powered by https://github.com/angular/material.angular.io
   </head>
   <body>
     <script>
+      // 若是二级目录则添加类似 '/phaser3-tutorial?redirect='
       window.location.replace(
-        '/phaser3-tutorial?redirect=' +
+        '/?redirect=' +
           encodeURIComponent(window.location.pathname + window.location.hash)
       )
     </script>
   </body>
 </html>
 ```
-
 
 4. 重定向，修改 `material-docs-app.ts`
 
@@ -45,10 +46,18 @@ constructor(router: Router){
 redirect(router: Router){
     const redirect = new URLSearchParams(location.search).get('redirect')
     if (redirect) {
-      router.navigateByUrl(decodeURIComponent(redirect).replace('/phaser3-tutorial/', ''))
+      // 若为二级目录则跳转如：(href).replace('/phaser3-tutorial/', '')
+      router.navigateByUrl(decodeURIComponent(redirect))
     }
   }
 ```
+
+3. `CNAME` 内容如下
+
+```
+phaser3.liurongqing.com
+```
+
 
 ## 布置自定义域名一级目录
 

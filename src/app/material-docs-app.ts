@@ -37,7 +37,7 @@ export class MaterialDocsApp implements OnDestroy {
   redirect(router: Router){
     const redirect = new URLSearchParams(location.search).get('redirect')
     if (redirect) {
-      router.navigateByUrl(decodeURIComponent(redirect).replace('/phaser3-tutorial/', ''))
+      router.navigateByUrl(decodeURIComponent(redirect))
     }
   }
 
