@@ -16,5 +16,6 @@ Powered by [https://github.com/angular/material.angular.io]
 
 ```shell
 # 新增 --base-href /phaser3-tutorial/ 参数
+# 或者直接修改html:  <base href="/review/">
 "prod-build": "ng build --prod --base-href=/phaser3-tutorial/"
 ```
