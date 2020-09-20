@@ -1,6 +1,6 @@
 # hi
 
-Powered by [https://github.com/angular/material.angular.io]
+Powered by https://github.com/angular/material.angular.io
 
 
 
