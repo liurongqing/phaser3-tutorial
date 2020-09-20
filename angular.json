@@ -32,7 +32,7 @@
               {
                 "glob": "**/*",
                 "input": "./node_modules/@angular/components-examples/docs-content",
-                "output": "/docs-content"
+                "output": "/phaser3-tutorial/docs-content"
               },
               {
                 "glob": "favicon.ico",
