@@ -18,7 +18,7 @@
           "options": {
             "aot": true,
             "sourceMap": true,
-            "outputPath": "dist",
+            "outputPath": "docs",
             "index": "src/index.html",
             "main": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
