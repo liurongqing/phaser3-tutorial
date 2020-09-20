@@ -3,28 +3,15 @@
 Powered by https://github.com/angular/material.angular.io
 
 
+## 基本修改
 
-## 配置修改
-
-1. angular.json 文件 
+1. `angular.json` 文件 
 
 ```shell
 "outputPath": "docs", # 将 dist 改成 docs
 "src/404.html" # 在 "src/sitemap.xml" 下添加 
-
-assets
 ```
-
-2. package.json 文件
-
-```shell
-# 新增 --base-href /phaser3-tutorial/ 参数
-# 或者直接修改html:  <base href="/review/">
-"prod-build": "ng build --prod --base-href=/phaser3-tutorial/"
-```
-
-
-3. 404.html 内容
+2. `404.html` 内容
 
 ```html
 <!DOCTYPE html>
@@ -46,7 +33,8 @@ assets
 </html>
 ```
 
-4. 修改 material-docs-app.ts
+
+4. 重定向，修改 `material-docs-app.ts`
 
 ```typescript
 import { Router} from '@angular/router'; //导入router服务
@@ -61,5 +49,25 @@ redirect(router: Router){
     }
   }
 ```
+
+## 布置自定义域名一级目录
+
+1. 从域名商 cname 到 liurongqing.github.io
+2. 在 github 项目的 Settings 中配置自定义域名
+3. 访问如： https://phaser3.liurongqing.com
+
+## 布置到二级目录需要修改配置
+
+1. package.json 文件
+
+```shell
+# 新增 --base-href /phaser3-tutorial/ 参数
+# 或者直接修改html:  <base href="/review/">
+"prod-build": "ng build --prod --base-href=/phaser3-tutorial/"
+```
+2. 将所有 `/docs-content` 替换为 `/phaser3-tutorial/docs-content`
+3. 访问如： https://liurongqing.github.io/phaser3-tutorial
+
+
 
 
