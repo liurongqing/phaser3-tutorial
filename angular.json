@@ -23,6 +23,10 @@
             "main": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "extractCss": true,
+            "allowedCommonJsDependencies": [
+              "zone.js/dist/zone",
+              "zone.js/dist/zone-error"
+            ],
             "assets": [
               {
                 "glob": "**/*",

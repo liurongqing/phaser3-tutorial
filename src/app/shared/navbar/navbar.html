@@ -10,15 +10,13 @@
     <img class="docs-angular-logo"
          src="assets/img/homepage/angular-white-transparent.svg"
          alt="angular">
-    <span>Material</span>
+    <span>Phaser3</span>
   </a>
   <a mat-button class="docs-navbar-hide-small docs-button"
      *ngFor="let key of sectionKeys"
      [routerLink]="key">{{sections[key].name}}</a>
   <a mat-button class="docs-navbar-hide-small docs-button" routerLink="guides">Guides</a>
   <div class="flex-spacer"></div>
-  <version-picker></version-picker>
-  <theme-picker></theme-picker>
   <a mat-button class="docs-button docs-navbar-hide-small" href="https://github.com/angular/components"
      aria-label="GitHub Repository">
     <img class="docs-angular-logo"

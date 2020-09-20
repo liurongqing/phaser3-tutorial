@@ -11,6 +11,12 @@ Powered by https://github.com/angular/material.angular.io
 "outputPath": "docs", # 将 dist 改成 docs
 "src/404.html" # 在 "src/sitemap.xml" 下添加 
 "src/CNAME" # 在 "src/404.html" 下添加
+
+# "architect" -> "build" -> "options" 下
+ "allowedCommonJsDependencies": [
+  "zone.js/dist/zone",
+  "zone.js/dist/zone-error"
+]
 ```
 2. `404.html` 内容
 
