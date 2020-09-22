@@ -1,5 +1,4 @@
 import {Component, NgModule} from '@angular/core';
-import {materialVersion} from '../version/version';
 
 @Component({
   selector: 'app-footer',
@@ -9,7 +8,6 @@ import {materialVersion} from '../version/version';
 export class Footer {
   isNextVersion = location.hostname.startsWith('next.material.angular.io');
 
-  version = materialVersion;
 }
 
 

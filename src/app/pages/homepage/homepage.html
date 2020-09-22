@@ -1,12 +1,12 @@
-<header focusOnNavigation class="docs-header-background"
-        [class.is-next-version]="isNextVersion" aria-label="Get started" id="homepage-header">
+<header focusOnNavigation class="docs-header-background" [class.is-next-version]="isNextVersion"
+  aria-label="Get started" id="homepage-header">
   <div class="docs-header-section">
     <div class="docs-header-headline">
-      <h1 class="mat-h1">Angular Material</h1>
-      <h2> Material Design components for Angular</h2>
+      <h1 class="mat-h1">Phaser3 学习</h1>
+      <h2> 精品教程 </h2>
     </div>
     <div class="docs-header-start">
-      <a mat-raised-button class="docs-button" routerLink="/guide/getting-started">Get started</a>
+      <a mat-raised-button class="docs-button" routerLink="/guide/getting-started">开始学习</a>
     </div>
   </div>
 </header>
@@ -14,14 +14,14 @@
 <main class="docs-homepage-promo">
   <div class="docs-homepage-row docs-introduction">
     <div class="docs-homepage-row-column">
-      <h2>High quality</h2>
+      <h2>完整小游戏</h2>
       <p>
         Internationalized and accessible components for everyone. Well tested to ensure performance and reliability.
       </p>
       <p>Straightforward APIs with consistent cross platform behaviour.</p>
     </div>
     <div class="docs-homepage-row-column">
-      <h2>Versatile</h2>
+      <h2>丰富的插件</h2>
       <p>
         Provide tools that help developers build their own custom components with common interaction patterns.
       </p>
@@ -30,7 +30,7 @@
       </p>
     </div>
     <div class="docs-homepage-row-column">
-      <h2>Frictionless</h2>
+      <h2>很多问题的解答</h2>
       <p>
         Built by the Angular team to integrate seamlessly with Angular.
       </p>
@@ -43,10 +43,10 @@
   <mat-divider></mat-divider>
 
   <div class="docs-homepage-featured-components docs-homepage-carousel-row">
-    <h2>Featured components</h2>
+    <h2>火爆游戏</h2>
     <app-carousel [itemWidth]="260" [aria-label]="'Featured components'">
       <a *ngFor="let comp of getTopComponents()" carousel-item class='docs-featured-components-carousel-item'
-         routerLink="/components/{{comp}}">
+        routerLink="/components/{{comp}}">
         <div class="docs-homepage-img-container">
           <img alt="" src="assets/screenshots/{{comp}}.scene.png" role="presentation">
         </div>
@@ -55,7 +55,7 @@
     </app-carousel>
 
     <a class="docs-link" routerLink="/components">
-      View all components
+      显示所有
       <mat-icon>chevron_right</mat-icon>
     </a>
   </div>
@@ -63,10 +63,10 @@
   <mat-divider></mat-divider>
 
   <div class="docs-homepage-guides docs-homepage-carousel-row">
-    <h2>Guides</h2>
+    <h2>常用指南</h2>
     <app-carousel [itemWidth]="260" [aria-label]="'Guides'">
       <a carousel-item class='docs-homepage-guides-carousel-item' *ngFor="let guide of guideItems.getAllItems()"
-         routerLink='/guide/{{guide.id}}'>
+        routerLink='/guide/{{guide.id}}'>
         <mat-card class="docs-homepage-guides-card">
           <mat-card-title>{{guide.name}}</mat-card-title>
           <div class="docs-homepage-guides-card-divider"></div>
@@ -78,7 +78,7 @@
     </app-carousel>
 
     <a class="docs-link" routerLink="/guides">
-      View all guides
+      显示全部指南
       <mat-icon>chevron_right</mat-icon>
     </a>
   </div>

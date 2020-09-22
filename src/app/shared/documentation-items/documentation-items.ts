@@ -38,9 +38,32 @@ export interface DocSection {
 }
 
 const exampleNames = Object.keys(EXAMPLE_COMPONENTS);
+
+const LABS = 'labs'
+const GAME = 'game'
+const PLUGIN = 'plugin'
+const PROBLEM = 'problem'
+
 const CDK = 'cdk';
 const COMPONENTS = 'components';
+
 export const SECTIONS: { [key: string]: DocSection } = {
+  [LABS]: {
+    name: '实验室',
+    summary: '基于官方例子的整理，<a href="https://labs.phaser.io/">官方例子</a>'
+  },
+  [GAME]: {
+    name: '游戏教程',
+    summary: '完整小游戏教程'
+  },
+  [PLUGIN]: {
+    name: '插件',
+    summary: '游戏插件'
+  },
+  [PROBLEM]: {
+    name: 'Q & A',
+    summary: '常见问题与解决方案'
+  },
   [COMPONENTS]: {
     name: 'Components',
     summary: 'Angular Material offers a wide variety of UI components based on the <a' +
@@ -507,19 +530,17 @@ const DOCS: { [key: string]: DocItem[] } = {
       },
     },
   ]
-  // TODO(jelbourn): re-add utilities and a11y as top-level categories once we can generate
-  // their API docs with dgeni. Currently our setup doesn't generate API docs for constants
-  // and standalone functions (much of the utilities) and we have no way of generating API
-  // docs more granularly than directory-level (within a11y) (same for viewport).
 };
 
 for (const doc of DOCS[COMPONENTS]) {
   doc.packageName = 'material';
+  // 查找模块指定前缀及排除指定前缀
   doc.examples =
     exampleNames
       .filter(key => key.match(RegExp(`^${doc.exampleSpecs.prefix}`)) &&
         !doc.exampleSpecs.exclude?.some(excludeName => key.indexOf(excludeName) === 0));
 }
+
 
 for (const doc of DOCS[CDK]) {
   doc.packageName = 'cdk';
