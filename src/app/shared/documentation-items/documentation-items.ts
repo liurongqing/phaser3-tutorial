@@ -1,5 +1,5 @@
-import {Injectable} from '@angular/core';
-import {EXAMPLE_COMPONENTS} from '@angular/components-examples';
+import { Injectable } from '@angular/core';
+import { EXAMPLE_COMPONENTS } from '@angular/components-examples';
 
 export interface AdditionalApiDoc {
   name: string;
@@ -78,6 +78,20 @@ export const SECTIONS: { [key: string]: DocSection } = {
 
 
 const DOCS: { [key: string]: DocItem[] } = {
+  [LABS]: [
+    {
+      id: 'actions',
+      name: 'Actions',
+      summary: '一些常用的方法',
+      exampleSpecs: {
+        prefix: 'actions-'
+      },
+      additionalApiDocs: [{
+        name: 'testing',
+        path: 'material-autocomplete-testing.html'
+      }]
+    }
+  ],
   [COMPONENTS]: [
     {
       id: 'autocomplete',
@@ -86,7 +100,9 @@ const DOCS: { [key: string]: DocItem[] } = {
       exampleSpecs: {
         prefix: 'autocomplete-',
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-autocomplete-testing.html'}],
+      additionalApiDocs: [{
+        name: 'Testing', path: 'material-autocomplete-testing.html'
+      }],
     },
     {
       id: 'badge',
@@ -95,7 +111,7 @@ const DOCS: { [key: string]: DocItem[] } = {
       exampleSpecs: {
         prefix: 'badge-',
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-badge-testing.html'}],
+      additionalApiDocs: [{ name: 'Testing', path: 'material-badge-testing.html' }],
     },
     {
       id: 'bottom-sheet',
@@ -104,7 +120,7 @@ const DOCS: { [key: string]: DocItem[] } = {
       exampleSpecs: {
         prefix: 'bottom-sheet-',
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-bottom-sheet-testing.html'}],
+      additionalApiDocs: [{ name: 'Testing', path: 'material-bottom-sheet-testing.html' }],
     },
     {
       id: 'button',
@@ -114,7 +130,7 @@ const DOCS: { [key: string]: DocItem[] } = {
         prefix: 'button-',
         exclude: ['button-toggle-']
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-button-testing.html'}],
+      additionalApiDocs: [{ name: 'Testing', path: 'material-button-testing.html' }],
     },
     {
       id: 'button-toggle',
@@ -123,7 +139,7 @@ const DOCS: { [key: string]: DocItem[] } = {
       exampleSpecs: {
         prefix: 'button-toggle-',
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-button-toggle-testing.html'}],
+      additionalApiDocs: [{ name: 'Testing', path: 'material-button-toggle-testing.html' }],
     },
     {
       id: 'card',
@@ -132,7 +148,7 @@ const DOCS: { [key: string]: DocItem[] } = {
       exampleSpecs: {
         prefix: 'card-',
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-card-testing.html'}],
+      additionalApiDocs: [{ name: 'Testing', path: 'material-card-testing.html' }],
     },
     {
       id: 'checkbox',
@@ -141,7 +157,7 @@ const DOCS: { [key: string]: DocItem[] } = {
       exampleSpecs: {
         prefix: 'checkbox-',
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-checkbox-testing.html'}],
+      additionalApiDocs: [{ name: 'Testing', path: 'material-checkbox-testing.html' }],
     },
     {
       id: 'chips',
@@ -150,7 +166,7 @@ const DOCS: { [key: string]: DocItem[] } = {
       exampleSpecs: {
         prefix: 'chips-',
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-chips-testing.html'}],
+      additionalApiDocs: [{ name: 'Testing', path: 'material-chips-testing.html' }],
     },
     {
       id: 'datepicker',
@@ -159,7 +175,7 @@ const DOCS: { [key: string]: DocItem[] } = {
       exampleSpecs: {
         prefix: 'datepicker-',
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-datepicker-testing.html'}],
+      additionalApiDocs: [{ name: 'Testing', path: 'material-datepicker-testing.html' }],
     },
     {
       id: 'dialog',
@@ -168,7 +184,7 @@ const DOCS: { [key: string]: DocItem[] } = {
       exampleSpecs: {
         prefix: 'dialog-',
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-dialog-testing.html'}],
+      additionalApiDocs: [{ name: 'Testing', path: 'material-dialog-testing.html' }],
     },
     {
       id: 'divider',
@@ -177,7 +193,7 @@ const DOCS: { [key: string]: DocItem[] } = {
       exampleSpecs: {
         prefix: 'divider-',
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-divider-testing.html'}],
+      additionalApiDocs: [{ name: 'Testing', path: 'material-divider-testing.html' }],
     },
     {
       id: 'expansion',
@@ -186,7 +202,7 @@ const DOCS: { [key: string]: DocItem[] } = {
       exampleSpecs: {
         prefix: 'expansion-',
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-expansion-testing.html'}],
+      additionalApiDocs: [{ name: 'Testing', path: 'material-expansion-testing.html' }],
     },
     {
       id: 'form-field',
@@ -195,7 +211,7 @@ const DOCS: { [key: string]: DocItem[] } = {
       exampleSpecs: {
         prefix: 'form-field-',
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-form-field-testing.html'}],
+      additionalApiDocs: [{ name: 'Testing', path: 'material-form-field-testing.html' }],
     },
     {
       id: 'grid-list',
@@ -204,7 +220,7 @@ const DOCS: { [key: string]: DocItem[] } = {
       exampleSpecs: {
         prefix: 'grid-list-',
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-grid-list-testing.html'}],
+      additionalApiDocs: [{ name: 'Testing', path: 'material-grid-list-testing.html' }],
     },
     {
       id: 'icon',
@@ -213,7 +229,7 @@ const DOCS: { [key: string]: DocItem[] } = {
       exampleSpecs: {
         prefix: 'icon-',
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-icon-testing.html'}],
+      additionalApiDocs: [{ name: 'Testing', path: 'material-icon-testing.html' }],
     },
     {
       id: 'input',
@@ -222,7 +238,7 @@ const DOCS: { [key: string]: DocItem[] } = {
       exampleSpecs: {
         prefix: 'input-',
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-input-testing.html'}],
+      additionalApiDocs: [{ name: 'Testing', path: 'material-input-testing.html' }],
     },
     {
       id: 'list',
@@ -231,7 +247,7 @@ const DOCS: { [key: string]: DocItem[] } = {
       exampleSpecs: {
         prefix: 'list-',
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-list-testing.html'}],
+      additionalApiDocs: [{ name: 'Testing', path: 'material-list-testing.html' }],
     },
     {
       id: 'menu',
@@ -240,7 +256,7 @@ const DOCS: { [key: string]: DocItem[] } = {
       exampleSpecs: {
         prefix: 'menu-',
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-menu-testing.html'}],
+      additionalApiDocs: [{ name: 'Testing', path: 'material-menu-testing.html' }],
     },
     {
       id: 'paginator',
@@ -249,7 +265,7 @@ const DOCS: { [key: string]: DocItem[] } = {
       exampleSpecs: {
         prefix: 'paginator-',
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-paginator-testing.html'}],
+      additionalApiDocs: [{ name: 'Testing', path: 'material-paginator-testing.html' }],
     },
     {
       id: 'progress-bar',
@@ -258,7 +274,7 @@ const DOCS: { [key: string]: DocItem[] } = {
       exampleSpecs: {
         prefix: 'progress-bar-',
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-progress-bar-testing.html'}],
+      additionalApiDocs: [{ name: 'Testing', path: 'material-progress-bar-testing.html' }],
     },
     {
       id: 'progress-spinner',
@@ -267,7 +283,7 @@ const DOCS: { [key: string]: DocItem[] } = {
       exampleSpecs: {
         prefix: 'progress-spinner-',
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-progress-spinner-testing.html'}],
+      additionalApiDocs: [{ name: 'Testing', path: 'material-progress-spinner-testing.html' }],
     },
     {
       id: 'radio',
@@ -277,7 +293,7 @@ const DOCS: { [key: string]: DocItem[] } = {
         prefix: 'radio-',
 
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-radio-testing.html'}],
+      additionalApiDocs: [{ name: 'Testing', path: 'material-radio-testing.html' }],
     },
     {
       id: 'ripple',
@@ -295,7 +311,7 @@ const DOCS: { [key: string]: DocItem[] } = {
       exampleSpecs: {
         prefix: 'select-',
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-select-testing.html'}],
+      additionalApiDocs: [{ name: 'Testing', path: 'material-select-testing.html' }],
     },
     {
       id: 'sidenav',
@@ -304,7 +320,7 @@ const DOCS: { [key: string]: DocItem[] } = {
       exampleSpecs: {
         prefix: 'sidenav-',
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-sidenav-testing.html'}],
+      additionalApiDocs: [{ name: 'Testing', path: 'material-sidenav-testing.html' }],
     },
     {
       id: 'slide-toggle',
@@ -313,7 +329,7 @@ const DOCS: { [key: string]: DocItem[] } = {
       exampleSpecs: {
         prefix: 'slide-toggle-',
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-slide-toggle-testing.html'}],
+      additionalApiDocs: [{ name: 'Testing', path: 'material-slide-toggle-testing.html' }],
     },
     {
       id: 'slider',
@@ -322,7 +338,7 @@ const DOCS: { [key: string]: DocItem[] } = {
       exampleSpecs: {
         prefix: 'slider-',
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-slider-testing.html'}],
+      additionalApiDocs: [{ name: 'Testing', path: 'material-slider-testing.html' }],
     },
     {
       id: 'snack-bar',
@@ -331,7 +347,7 @@ const DOCS: { [key: string]: DocItem[] } = {
       exampleSpecs: {
         prefix: 'snack-bar-',
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-snack-bar-testing.html'}],
+      additionalApiDocs: [{ name: 'Testing', path: 'material-snack-bar-testing.html' }],
     },
     {
       id: 'sort',
@@ -340,7 +356,7 @@ const DOCS: { [key: string]: DocItem[] } = {
       exampleSpecs: {
         prefix: 'sort-',
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-sort-testing.html'}],
+      additionalApiDocs: [{ name: 'Testing', path: 'material-sort-testing.html' }],
     },
     {
       id: 'stepper',
@@ -349,7 +365,7 @@ const DOCS: { [key: string]: DocItem[] } = {
       exampleSpecs: {
         prefix: 'stepper-',
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-stepper-testing.html'}],
+      additionalApiDocs: [{ name: 'Testing', path: 'material-stepper-testing.html' }],
     },
     {
       id: 'table',
@@ -358,7 +374,7 @@ const DOCS: { [key: string]: DocItem[] } = {
       exampleSpecs: {
         prefix: 'table-',
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-table-testing.html'}],
+      additionalApiDocs: [{ name: 'Testing', path: 'material-table-testing.html' }],
     },
     {
       id: 'tabs',
@@ -367,7 +383,7 @@ const DOCS: { [key: string]: DocItem[] } = {
       exampleSpecs: {
         prefix: 'tab-',
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-tabs-testing.html'}],
+      additionalApiDocs: [{ name: 'Testing', path: 'material-tabs-testing.html' }],
     },
     {
       id: 'toolbar',
@@ -376,7 +392,7 @@ const DOCS: { [key: string]: DocItem[] } = {
       exampleSpecs: {
         prefix: 'toolbar-',
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-toolbar-testing.html'}],
+      additionalApiDocs: [{ name: 'Testing', path: 'material-toolbar-testing.html' }],
     },
     {
       id: 'tooltip',
@@ -385,7 +401,7 @@ const DOCS: { [key: string]: DocItem[] } = {
       exampleSpecs: {
         prefix: 'tooltip-',
       },
-      additionalApiDocs: [{name: 'Testing', path: 'material-tooltip-testing.html'}],
+      additionalApiDocs: [{ name: 'Testing', path: 'material-tooltip-testing.html' }],
     },
     {
       id: 'tree',
