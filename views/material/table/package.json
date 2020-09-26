@@ -1,0 +1,9 @@
+{
+  "name": "@angular/components-examples/material/table",
+  "main": "../../bundles/components-examples-material-table.umd.js",
+  "fesm2015": "../../fesm2015/material/table.js",
+  "esm2015": "../../esm2015/material/table/table_public_index.js",
+  "typings": "./table_public_index.d.ts",
+  "module": "../../fesm2015/material/table.js",
+  "es2015": "../../fesm2015/material/table.js"
+}

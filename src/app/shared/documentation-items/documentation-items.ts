@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { EXAMPLE_COMPONENTS } from '@angular/components-examples';
 
+console.log('EXAMPLE_COMPONENTS', EXAMPLE_COMPONENTS)
+
 export interface AdditionalApiDoc {
   name: string;
   path: string;

@@ -203,9 +203,8 @@
   dependencies:
     tslib "^2.0.0"
 
-"@angular/components-examples@angular/material2-docs-content#10.2.x":
-  version "10.2.2-sha-b8f624e4a"
-  resolved "https://codeload.github.com/angular/material2-docs-content/tar.gz/d5aab70daf5ce06428a2379c9171c5f12f2baca7"
+"@angular/components-examples@file:./views":
+  version "11.0.0-next.0-sha-4ef3d3f10"
   dependencies:
     tslib "^2.0.0"
 

@@ -1,0 +1,16 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-comment">/**
+ * @title Badge overview
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'badge-overview-example'</span>,
+  templateUrl: <span class="hljs-string">'badge-overview-example.html'</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> BadgeOverviewExample {
+  hidden = <span class="hljs-literal">false</span>;
+
+  toggleBadgeVisibility() {
+    <span class="hljs-keyword">this</span>.hidden = !<span class="hljs-keyword">this</span>.hidden;
+  }
+}

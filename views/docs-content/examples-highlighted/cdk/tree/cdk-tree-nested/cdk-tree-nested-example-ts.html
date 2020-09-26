@@ -1,0 +1,55 @@
+<span class="hljs-keyword">import</span> {ArrayDataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/collections'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {NestedTreeControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/tree'</span>;
+
+<span class="hljs-comment">/**
+ * Food data with nested structure.
+ * Each node has a name and an optiona list of children.
+ */</span>
+<span class="hljs-keyword">interface</span> FoodNode {
+  name: <span class="hljs-built_in">string</span>;
+  children?: FoodNode[];
+}
+
+<span class="hljs-keyword">const</span> TREE_DATA: FoodNode[] = [
+  {
+    name: <span class="hljs-string">'Fruit'</span>,
+    children: [
+      {name: <span class="hljs-string">'Apple'</span>},
+      {name: <span class="hljs-string">'Banana'</span>},
+      {name: <span class="hljs-string">'Fruit loops'</span>},
+    ]
+  }, {
+    name: <span class="hljs-string">'Vegetables'</span>,
+    children: [
+      {
+        name: <span class="hljs-string">'Green'</span>,
+        children: [
+          {name: <span class="hljs-string">'Broccoli'</span>},
+          {name: <span class="hljs-string">'Brussels sprouts'</span>},
+        ]
+      }, {
+        name: <span class="hljs-string">'Orange'</span>,
+        children: [
+          {name: <span class="hljs-string">'Pumpkins'</span>},
+          {name: <span class="hljs-string">'Carrots'</span>},
+        ]
+      },
+    ]
+  },
+];
+
+<span class="hljs-comment">/**
+ * @title Tree with nested nodes
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'cdk-tree-nested-example'</span>,
+  templateUrl: <span class="hljs-string">'cdk-tree-nested-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'cdk-tree-nested-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkTreeNestedExample {
+  treeControl = <span class="hljs-keyword">new</span> NestedTreeControl&lt;FoodNode&gt; (<span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.children);
+  dataSource = <span class="hljs-keyword">new</span> ArrayDataSource(TREE_DATA);
+
+  hasChild = <span class="hljs-function">(<span class="hljs-params">_: <span class="hljs-built_in">number</span>, node: FoodNode</span>) =&gt;</span> !!node.children &amp;&amp; node.children.length &gt; <span class="hljs-number">0</span>;
+}

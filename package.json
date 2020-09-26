@@ -16,7 +16,7 @@
     "@angular/cdk-experimental": "^10.2.1",
     "@angular/common": "^10.1.0",
     "@angular/compiler": "^10.1.0",
-    "@angular/components-examples": "angular/material2-docs-content#10.2.x",
+    "@angular/components-examples": "file:./views",
     "@angular/core": "^10.1.0",
     "@angular/forms": "^10.1.0",
     "@angular/google-maps": "^10.2.1",
