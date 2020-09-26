@@ -1,7 +1,7 @@
 import {HttpClient} from '@angular/common/http';
 import {Injectable} from '@angular/core';
 import {VERSION} from '@angular/material/core';
-import {EXAMPLE_COMPONENTS, ExampleData} from '../../posts';
+import {EXAMPLE_COMPONENTS, ExampleData} from '../../../posts';
 
 import {materialVersion} from '../version/version';
 
@@ -13,7 +13,7 @@ const COPYRIGHT =
     can be found in the LICENSE file at http://angular.io/license`;
 
 /**
- * Path that refers to the docs-content from the "../../posts" package. The
+ * Path that refers to the docs-content from the "../../../posts" package. The
  * structure is defined in the Material repository, but we include the docs-content as assets in
  * in the CLI configuration.
  */

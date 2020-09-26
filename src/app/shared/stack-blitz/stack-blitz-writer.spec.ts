@@ -1,6 +1,6 @@
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
 import {async, fakeAsync, flushMicrotasks, inject, TestBed} from '@angular/core/testing';
-import {EXAMPLE_COMPONENTS, ExampleData, LiveExample} from '../../posts';
+import {EXAMPLE_COMPONENTS, ExampleData, LiveExample} from '../../../posts';
 import {StackBlitzWriter} from './stack-blitz-writer';
 
 const testExampleId = 'my-test-example-id';
