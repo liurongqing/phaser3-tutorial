@@ -35,7 +35,7 @@
               },
               {
                 "glob": "**/*",
-                "input": "./views/docs-content",
+                "input": "./src/posts/docs-content",
                 "output": "/docs-content"
               },
               {
