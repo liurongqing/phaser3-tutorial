@@ -9,7 +9,7 @@ import {
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {Clipboard} from '@angular/cdk/clipboard';
 
-import {EXAMPLE_COMPONENTS, LiveExample} from '@angular/components-examples';
+import {EXAMPLE_COMPONENTS, LiveExample} from '../../posts';
 import {CodeSnippet} from './code-snippet';
 
 export type Views = 'snippet' | 'full' | 'demo';
@@ -163,7 +163,7 @@ export class ExampleViewer implements OnInit {
     // files. More details: https://webpack.js.org/api/module-methods/#magic-comments.
     const moduleExports: any = await import(
       /* webpackExclude: /\.map$/ */
-      '@angular/components-examples/fesm2015/' + module.importSpecifier);
+      '../../posts/fesm2015/' + module.importSpecifier);
     this._exampleComponentType = moduleExports[componentName];
     // The components examples package is built with Ivy. This means that no factory files are
     // generated. To retrieve the factory of the AOT compiled module, we simply pass the module

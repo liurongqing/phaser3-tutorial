@@ -35,7 +35,7 @@
               },
               {
                 "glob": "**/*",
-                "input": "./node_modules/@angular/components-examples/docs-content",
+                "input": "./views/docs-content",
                 "output": "/docs-content"
               },
               {

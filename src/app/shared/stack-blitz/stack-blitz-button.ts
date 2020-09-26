@@ -1,5 +1,5 @@
 import {Component, HostListener, Input, NgModule} from '@angular/core';
-import {ExampleData} from '@angular/components-examples';
+import {ExampleData} from '../../posts';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTooltipModule} from '@angular/material/tooltip';

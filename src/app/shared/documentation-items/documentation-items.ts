@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { EXAMPLE_COMPONENTS } from '@angular/components-examples';
+import { EXAMPLE_COMPONENTS } from '../../posts';
 
 console.log('EXAMPLE_COMPONENTS', EXAMPLE_COMPONENTS)
 
