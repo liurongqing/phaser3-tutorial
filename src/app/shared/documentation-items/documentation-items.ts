@@ -86,7 +86,7 @@ const DOCS: { [key: string]: DocItem[] } = {
       name: 'Actions',
       summary: '一些常用的方法',
       exampleSpecs: {
-        prefix: 'actions-'
+        prefix: 'labs-actions-'
       },
       additionalApiDocs: [{
         name: 'testing',
@@ -550,6 +550,15 @@ const DOCS: { [key: string]: DocItem[] } = {
   ]
 };
 
+for (const doc of DOCS[LABS]) {
+  doc.packageName = 'labs';
+  // 查找模块指定前缀及排除指定前缀
+  doc.examples =
+    exampleNames
+      .filter(key => key.match(RegExp(`^${doc.exampleSpecs.prefix}`)) &&
+        !doc.exampleSpecs.exclude?.some(excludeName => key.indexOf(excludeName) === 0));
+}
+
 for (const doc of DOCS[COMPONENTS]) {
   doc.packageName = 'material';
   // 查找模块指定前缀及排除指定前缀
@@ -570,7 +579,8 @@ for (const doc of DOCS[CDK]) {
 
 const ALL_COMPONENTS = DOCS[COMPONENTS];
 const ALL_CDK = DOCS[CDK];
-const ALL_DOCS = ALL_COMPONENTS.concat(ALL_CDK);
+const ALL_LABS = DOCS[LABS];
+const ALL_DOCS = ALL_COMPONENTS.concat(ALL_CDK).concat(ALL_LABS);
 
 @Injectable()
 export class DocumentationItems {
@@ -582,11 +592,16 @@ export class DocumentationItems {
     if (section === CDK) {
       return ALL_CDK;
     }
+    if (section === LABS) {
+      return ALL_LABS;
+    }
     return [];
   }
 
   getItemById(id: string, section: string): DocItem | undefined {
-    const sectionLookup = section === 'cdk' ? 'cdk' : 'material';
+    let sectionLookup = section === 'components' ? 'material' : section;
+    console.log('sectionLookup', sectionLookup)
+    // const sectionLookup = section === 'cdk' ? 'cdk' : 'material';
     return ALL_DOCS.find(doc => doc.id === id && doc.packageName === sectionLookup);
   }
 }

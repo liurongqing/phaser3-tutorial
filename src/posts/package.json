@@ -30,9 +30,7 @@
   "dependencies": {
     "tslib": "^2.0.0"
   },
-  "main": "./bundles/components-examples.umd.js",
   "fesm2015": "./fesm2015/components-examples.js",
-  "esm2015": "./esm2015/index.js",
   "typings": "./index.d.ts",
   "module": "./fesm2015/components-examples.js",
   "es2015": "./fesm2015/components-examples.js"

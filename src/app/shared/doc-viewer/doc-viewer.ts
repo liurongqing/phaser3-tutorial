@@ -22,7 +22,7 @@ import {HeaderLink} from './header-link';
 
 @Component({
   selector: 'doc-viewer',
-  template: 'Loading document...',
+  template: '加载中...',
 })
 export class DocViewer implements OnDestroy {
   private _portalHosts: DomPortalOutlet[] = [];
