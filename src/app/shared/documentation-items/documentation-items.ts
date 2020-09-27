@@ -87,11 +87,7 @@ const DOCS: { [key: string]: DocItem[] } = {
       summary: '一些常用的方法',
       exampleSpecs: {
         prefix: 'labs-actions-'
-      },
-      additionalApiDocs: [{
-        name: 'testing',
-        path: 'material-autocomplete-testing.html'
-      }]
+      }
     }
   ],
   [COMPONENTS]: [
